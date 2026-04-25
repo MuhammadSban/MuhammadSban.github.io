@@ -1,0 +1,17 @@
+body{
+    background: rgb(66, 56, 56);
+}
+
+.titletext{
+    font-size: 64pt;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bodytext{
+    color: white;
+    text-align: center;
+    font-size: 20pt;
+
+}
