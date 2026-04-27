@@ -15,3 +15,17 @@ body{
     font-size: 20pt;
 
 }
+
+#BMICalc{
+    text-align: center;   
+    align-items: center;
+    width: 20%;
+    margin: 2rem auto;
+    background-color: white;
+}
+
+#bmicalcd{
+    font-size: 64pt;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
