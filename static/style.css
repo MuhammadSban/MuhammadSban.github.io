@@ -1,31 +1,124 @@
-body{
-    background: rgb(66, 56, 56);
+:root {
+    --bg: #0d0d0f;
+    --surface: #16161a;
+    --border: rgba(255,255,255,0.08);
+    --accent: #e8c97a;
+    --text-1: #f0ede8;
+    --text-2: #9490a0;
 }
 
-.titletext{
-    font-size: 64pt;
-    color: white;
-    font-weight: bold;
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 2rem;
+}
+
+.titletext {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 800;
+    color: var(--text-1);
     text-align: center;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    padding: 2rem 0 1rem;
 }
 
-.bodytext{
-    color: white;
+.bodytext {
+    color: var(--text-2);
     text-align: center;
-    font-size: 20pt;
-
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.02em;
 }
 
-#BMICalc{
-    text-align: center;   
-    align-items: center;
-    width: 50%;
-    margin: 2rem auto;
-    background-color: white;
-}
-
-#bmicalcd{
-    font-size: 64pt;
-    color:rgb(255, 255, 255);
+#BMICalc {
     text-align: center;
+    width: min(480px, 92%);
+    margin: 2.5rem auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+}
+
+#BMICalc h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-1);
+    margin-bottom: 1.5rem;
+}
+
+#BMICalc label {
+    color: var(--text-2);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+#BMICalc input[type="number"] {
+    background: #1e1e24;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-1);
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.6rem 0.75rem;
+    width: 80px;
+    outline: none;
+    margin: 0 0.25rem;
+    -moz-appearance: textfield;
+    transition: border-color 0.2s ease;
+}
+
+#BMICalc input[type="number"]::-webkit-outer-spin-button,
+#BMICalc input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#BMICalc input[type="number"]:focus {
+    border-color: rgba(232, 201, 122, 0.5);
+}
+
+#BMICalc button {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    background: var(--accent);
+    color: #0d0d0f;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+#BMICalc button:hover {
+    background: #f0d68a;
+    transform: translateY(-2px);
+}
+
+#BMICalc button:active {
+    transform: translateY(0);
+}
+
+#bmicalcd {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 800;
+    color: var(--accent);
+    text-align: center;
+    min-height: 1.2em;
 }
